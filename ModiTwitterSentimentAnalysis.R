@@ -12,11 +12,12 @@ library("syuzhet")
 #For the Keys You need a Twitter Developer Account. Apply at https://apps.twitter.com/ to get the keys.
  
 
-consumer_key <- 'r0aEwIVGPzbyL2GF86n2PURGv'
-consumer_secret <- 'szfLh1q18eKlVJT2ECWnO1G7sqY0O2SfjYfy1UEX28Eyz5UlpF'
-access_token <- '2945374159-VFnclbH1D2hUGuxklk1hA0eRErFGJ1gwvrk9Es6'
-access_secret <- 'fAKok7F3I8spolOtcu4kskiF61XZemmcwhnRx4Tn4MJnB'
+consumer_key <- 'xxxxwIVGxxxxGF86n2Pxxxx'
+consumer_secret <- 'xxxxh1q18eKlVJT2ECWnxxxxsqY0O2SfjYfy1UEX28Eyz5xxxx'
+access_token <- 'xxxx374159-VFnclbH1D2xxxxxklk1hA0eRErFGJ1gwvrkxxxx'
+access_secret <- 'xxxxk7F3I8spolOtcu4kskxxxxXZemmcwhnRx4Tn4xxxx'
 
+#Extracting Narendra Modi's recent 250 tweets
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 tweets <- userTimeline("narendramodi", n=250)
 
