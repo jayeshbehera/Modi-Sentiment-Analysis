@@ -1,17 +1,16 @@
-
+#Installing the packages 
 install.packages("SnowballC")
 install.packages("twitteR")
 install.packages("syuzhet")
 
-#Packages Required
+#Running the packages
 
 library("SnowballC")
 library("twitteR")
 library("syuzhet")
 
-#For the Keys You need a Twitter Developer Account. Apply at https://apps.twitter.com/ to get the keys.
+#For the Keys You need a Twitter Developer Account. Apply at https://apps.twitter.com/ to get the keys. It will take 3-7 days for the mail to arrive
  
-
 consumer_key <- 'xxxxwIVGxxxxGF86n2Pxxxx'
 consumer_secret <- 'xxxxh1q18eKlVJT2ECWnxxxxsqY0O2SfjYfy1UEX28Eyz5xxxx'
 access_token <- 'xxxx374159-VFnclbH1D2xxxxxklk1hA0eRErFGJ1gwvrkxxxx'
@@ -53,12 +52,10 @@ head(emotion.df2)
 
 head(emotion.df2)
 
-
 sent.value <- get_sentiment(word.df)
 
 most.positive <- word.df[sent.value == max(sent.value)]
 
-most.positive
 sent.value <- get_sentiment(word.df)
 
 most.positive <- word.df[sent.value == max(sent.value)]
@@ -72,11 +69,14 @@ most.negative
 
 sent.value
 
+#positive tweets
 positive.tweets <- word.df[sent.value > 0] 
 head(positive.tweets)
 
+#negative tweets
 negative.tweets <- word.df[sent.value < 0]
 head(negative.tweets)
 
+#neutral tweets
 neutral.tweets <- word.df[sent.value == 0] 
 head(neutral.tweets)
